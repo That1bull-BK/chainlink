@@ -21,12 +21,10 @@ on:
       dep_starknet_sha:
         description: chainlink-starknet commit or branch
         required: false
-        default: main
         type: string
       dep_atlas_sha:
         description: atlas commit or branch
         required: false
-        default: master
         type: string
   workflow_call:
     inputs:
