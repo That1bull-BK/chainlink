@@ -17,4 +17,4 @@ jobs:
       - name: Check out Code
         uses: actions/checkout@v3
       - name: Run actionlint
-        uses: reviewdog/action-actionlint@46bb1b6f2d05d10a2c2851ee235fe36a0ad2daa5 # v1.23.0
+        uses: reviewdog/action-actionlint@31863360b75778136a7171692ecf0fe26fb5d630 # v1.23.0
