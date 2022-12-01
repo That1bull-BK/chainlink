@@ -8,7 +8,7 @@ replace github.com/ethereum/go-ethereum => github.com/smartcontractkit/go-ethere
 
 require (
 	github.com/Depado/ginprom v1.7.4
-	github.com/Masterminds/semver/v3 v3.1.1
+	github.com/Masterminds/semver/v3 v3.2.0
 	github.com/ava-labs/coreth v0.11.0-rc.4
 	github.com/btcsuite/btcd v0.23.1
 	github.com/cosmos/cosmos-sdk v0.44.5
