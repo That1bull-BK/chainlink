@@ -181,7 +181,7 @@ jobs:
           ref: ${{ env.solana_sha }}
       - name: Get ProjectSerum Version
         id: psversion
-        uses: smartcontractkit/chainlink-solana/.github/actions/projectserum_version@aa66b2736c8288dbc63865a2bc3c5686d6041524 # stable action on Oct 12 2022
+        uses: smartcontractkit/chainlink-solana/.github/actions/projectserum_version@f505d5fb9efe5ef6b16292176e4081cd6285bec9 # stable action on Oct 12 2022
   solana-build-contracts:
     environment: integration
     permissions:
@@ -213,7 +213,7 @@ jobs:
           ref: ${{ env.solana_sha }}
       - name: Build contracts
         if: needs.changes.outputs.src == 'true'
-        uses: smartcontractkit/chainlink-solana/.github/actions/build_contract_artifacts@aa66b2736c8288dbc63865a2bc3c5686d6041524 # stable action on Oct 12 2022
+        uses: smartcontractkit/chainlink-solana/.github/actions/build_contract_artifacts@f505d5fb9efe5ef6b16292176e4081cd6285bec9 # stable action on Oct 12 2022
         with:
           ref: ${{ env.solana_sha }}
 
