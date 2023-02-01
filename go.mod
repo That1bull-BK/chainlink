@@ -3,7 +3,7 @@ module github.com/smartcontractkit/chainlink
 go 1.19
 
 require (
-	github.com/Depado/ginprom v1.7.4
+	github.com/Depado/ginprom v1.7.5
 	github.com/Masterminds/semver/v3 v3.2.0
 	github.com/ava-labs/coreth v0.11.0-rc.4
 	github.com/btcsuite/btcd v0.23.1
@@ -22,7 +22,7 @@ require (
 	github.com/gin-contrib/expvar v0.0.1
 	github.com/gin-contrib/sessions v0.0.5
 	github.com/gin-contrib/size v0.0.0-20220707104239-f5a650759656
-	github.com/gin-gonic/gin v1.8.1
+	github.com/gin-gonic/gin v1.8.2
 	github.com/gogo/protobuf v1.3.3
 	github.com/google/pprof v0.0.0-20210720184732-4bb14d4b1be1
 	github.com/google/uuid v1.3.0
