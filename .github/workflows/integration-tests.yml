@@ -59,7 +59,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
       - name: Build Image
         if: needs.changes.outputs.src == 'true'
-        uses: smartcontractkit/chainlink-github-actions/chainlink-testing-framework/build-image@ce87f8986ca18336cc5015df75916c2ec0a7c4b3 # v2.1.2
+        uses: smartcontractkit/chainlink-github-actions/chainlink-testing-framework/build-image@7882cf348cd6a1f6bcf1ee8280185584ebba96e9 # v2.3.10
         with:
           cl_repo: smartcontractkit/chainlink
           cl_ref: ${{ github.sha }}
@@ -102,7 +102,7 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
       - name: build test runner
-        uses: smartcontractkit/chainlink-github-actions/docker/build-push@ce87f8986ca18336cc5015df75916c2ec0a7c4b3 # v2.1.2
+        uses: smartcontractkit/chainlink-github-actions/docker/build-push@7882cf348cd6a1f6bcf1ee8280185584ebba96e9 # v2.3.10
         with:
           tags: ${{ env.ENV_JOB_IMAGE }}
           file: ./integration-tests/test.Dockerfile
@@ -184,7 +184,7 @@ jobs:
       ## Run this step when changes that require tests to be run are made
       - name: Run Tests
         if: needs.changes.outputs.src == 'true'
-        uses: smartcontractkit/chainlink-github-actions/chainlink-testing-framework/run-tests@ce87f8986ca18336cc5015df75916c2ec0a7c4b3 # v2.1.2
+        uses: smartcontractkit/chainlink-github-actions/chainlink-testing-framework/run-tests@7882cf348cd6a1f6bcf1ee8280185584ebba96e9 # v2.3.10
         env:
           TEST_SUITE: smoke
           TEST_ARGS: -test.timeout 30m
@@ -209,7 +209,7 @@ jobs:
       ## Run this step when changes that do not need the test to run are made
       - name: Run Setup
         if: needs.changes.outputs.src == 'false'
-        uses: smartcontractkit/chainlink-github-actions/chainlink-testing-framework/setup-run-tests-environment@ce87f8986ca18336cc5015df75916c2ec0a7c4b3 # v2.1.2
+        uses: smartcontractkit/chainlink-github-actions/chainlink-testing-framework/setup-run-tests-environment@7882cf348cd6a1f6bcf1ee8280185584ebba96e9 # v2.3.10
         with:
           test_download_vendor_packages_command: cd ./integration-tests && go mod download
           go_mod_path: ./integration-tests/go.mod
@@ -328,7 +328,7 @@ jobs:
           path: ${{ env.CONTRACT_ARTIFACTS_PATH }}
       - name: Build Test Runner
         if: ${{ env.SOLANA_REF != 'develop' }}
-        uses: smartcontractkit/chainlink-github-actions/docker/build-push@ce87f8986ca18336cc5015df75916c2ec0a7c4b3 # v2.1.2
+        uses: smartcontractkit/chainlink-github-actions/docker/build-push@7882cf348cd6a1f6bcf1ee8280185584ebba96e9 # v2.3.10
         with:
           tags: ${{ secrets.QA_AWS_ACCOUNT_NUMBER }}.dkr.ecr.${{ secrets.QA_AWS_REGION }}.amazonaws.com/chainlink-solana-tests:${{ env.SOLANA_REF }}
           file: ./integration-tests/test.Dockerfile
@@ -344,7 +344,7 @@ jobs:
           echo "\`${{ env.SOLANA_REF }}\`" >>$GITHUB_STEP_SUMMARY
       - name: Run Tests
         if: needs.changes.outputs.src == 'true'
-        uses: smartcontractkit/chainlink-github-actions/chainlink-testing-framework/run-tests@ce87f8986ca18336cc5015df75916c2ec0a7c4b3 # v2.1.2
+        uses: smartcontractkit/chainlink-github-actions/chainlink-testing-framework/run-tests@7882cf348cd6a1f6bcf1ee8280185584ebba96e9 # v2.3.10
         with:
           test_command_to_run: export ENV_JOB_IMAGE=${{ secrets.QA_AWS_ACCOUNT_NUMBER }}.dkr.ecr.${{ secrets.QA_AWS_REGION }}.amazonaws.com/chainlink-solana-tests:${{ env.SOLANA_REF }} && make test_smoke
           cl_repo: ${{ secrets.QA_AWS_ACCOUNT_NUMBER }}.dkr.ecr.${{ secrets.QA_AWS_REGION }}.amazonaws.com/chainlink
@@ -411,7 +411,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
       ## Only run OCR smoke test for now
       - name: Run Tests
-        uses: smartcontractkit/chainlink-github-actions/chainlink-testing-framework/run-tests@ce87f8986ca18336cc5015df75916c2ec0a7c4b3 # v2.1.2
+        uses: smartcontractkit/chainlink-github-actions/chainlink-testing-framework/run-tests@7882cf348cd6a1f6bcf1ee8280185584ebba96e9 # v2.3.10
         env:
           TEST_SUITE: smoke
           TEST_ARGS: -test.timeout 30m
