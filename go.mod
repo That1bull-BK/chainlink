@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/Depado/ginprom v1.7.4
-	github.com/Masterminds/semver/v3 v3.2.0
+	github.com/Masterminds/semver/v3 v3.3.1
 	github.com/ava-labs/coreth v0.11.0-rc.4
 	github.com/btcsuite/btcd v0.23.1
 	github.com/danielkov/gin-helmet v0.0.0-20171108135313-1387e224435e
