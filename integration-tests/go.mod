@@ -252,7 +252,7 @@ require (
 	github.com/shirou/gopsutil v3.21.11+incompatible // indirect
 	github.com/shirou/gopsutil/v3 v3.22.12 // indirect
 	github.com/shopspring/decimal v1.3.1 // indirect
-	github.com/sirupsen/logrus v1.9.0 // indirect
+	github.com/sirupsen/logrus v1.9.1 // indirect
 	github.com/smartcontractkit/chainlink-relay v0.1.7-0.20230221200635-404a44389f85 // indirect
 	github.com/smartcontractkit/chainlink-starknet/relayer v0.0.0-20230223033525-5be75fb81118 // indirect
 	github.com/smartcontractkit/sqlx v1.3.5-0.20210805004948-4be295aacbeb // indirect
